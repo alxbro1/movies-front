@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "live-server",
-    "build": "webpack",
-    "build-watch": "webpack --watch"
+    "start": "live-server"
   },
   "keywords": [],
   "author": "",
