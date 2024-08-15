@@ -1,0 +1,203 @@
+*{
+    font-family: "oswald", sans-serif;
+}
+/* Navigation */
+#navbar{
+    width: 100%;
+    height: 3rem;
+    max-height: 4rem;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #fff;
+}
+
+#iconSec{
+    width: auto;
+    height: 100%;
+}
+
+#listSec ul li{
+    margin-right: 1rem;
+    display: inline-block;
+}
+
+#listSec ul li:hover{
+    color: rgb(255, 153, 0);
+}
+
+.selected{
+    border-bottom: 3px solid rgb(255, 153, 0);
+}
+
+/* Carousel */
+#bannerSec {
+    position: relative;
+    width: 100%;
+    height: 55vh;
+    overflow: hidden;
+}
+
+#carouselCont {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+    width: 100%;
+}
+
+.carouselItem {
+    max-width: 100vw;
+    width: 100vw;
+    flex-shrink: 0;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.carouselTittle, .carouselDescription {
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    text-align: left;
+}
+
+.carouselTittle {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.carouselDescription {
+    font-size: 1.5rem;
+}
+
+#prevBtn, #nextBtn {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
+
+#prevBtn:hover, #nextBtn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Premiere Section */
+#premiereSec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+#premiereSec h2{
+    font-size: 3rem;
+    padding: 1rem;
+}
+.CardsContainer{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2em;
+    justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px; 
+}
+.movieCard{
+    position: relative;
+}
+.movieCard img{
+        max-width: 100%;
+        max-height: 300px;
+        width: auto;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 15px;
+        box-shadow: 0 0 15px black;
+}
+.premiere-label {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: rgba(255, 0, 0, 0.7);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+.CardsContainer h3{
+    font-size: 1.5rem;
+  }
+.CardsContainer h5{
+    font-weight: lighter;
+    color:gray;
+    font-size: 1rem;
+  }
+.footherCard{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 7px;
+}
+.playButton{
+    margin-right: 5px;
+}
+.timeLabel{
+    position: absolute;
+    top: 8px;
+    right: 8px;    
+    color: #fff;
+    text-shadow: 0px 0px 6px black;
+}
+.stars{
+    position: absolute;
+    right:0;
+    color: gray;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+.genres{
+    position: absolute;
+    bottom: 5px;
+    left: 13px;
+    color: #ff9929;
+    font-weight: lighter;
+    text-shadow: 0px 0px 6px black;
+}
+.text-orange{
+    color: #ff9929;
+}
+
+/* FORM TO ADD MOVIES */
+@media (min-width: 0px) and (max-width: 1024px) {
+	.CardsContainer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+}
+    #formContainer{
+       margin: 0;
+       width: 100% !important;     
+    }
+}
